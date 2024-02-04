@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html id="html" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sixtyfour&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <title>Notely</title>
+  </head>
+  <body>
+    <section class="header">
+      <nav>
+        <a href="notes.html">NOTELY</a>
+        <div class="dOrW">
+          <a id="lightModeBtn" class="modeBtn" onclick="lightMode()"
+            ><i class="bx bxs-sun"></i
+          ></a>
+          <a id="darkModeBtn" class="modeBtn selected" onclick="darkMode()"
+            ><i class="bx bxs-moon"></i
+          ></a>
+        </div>
+      </nav>
+    </section>
+
+    <div class="lineSection">
+      <hr id="hr1" />
+    </div>
+
+    <section class="mainSection">
+      <div id="smllScrn" class="smallScreen">
+        <h1>To display content, screen width must exceed 700 pixels!</h1>
+      </div>
+      <div class="main">
+        <section class="sideBar">
+          <aside>
+            <a href="notes.html" id="notesLink" class="aLink"
+              ><i class="bx bxs-note"></i>Notes</a
+            >
+            <a href="to-do-list.html" id="toDoLink" class="aLink selected"
+              ><i class="bx bx-list-check"></i>To-Do List</a
+            >
+            <a href="about.html" id="aboutLink" class="aLink"
+              ><i class="bx bxs-info-square"></i>About</a
+            >
+          </aside>
+        </section>
+
+        <section class="to-doContent">
+          <div id="ToDo" class="to-do">
+            <div class="inputSection">
+              <p id="inputSectionP">To-Do List</p>
+              <input type="text" id="inputBox" placeholder="Type task name" />
+              <div class="to-doBtns">
+                <a id="addTask" onclick="addTasks()">Add</a>
+                <a id="cancelTask" onclick="cancelTasks()">Cancel</a>
+              </div>
+            </div>
+            <div id="listContainer" class="listSection"></div>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>

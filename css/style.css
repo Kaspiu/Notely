@@ -1,0 +1,505 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+}
+
+html {
+  background-color: #171b1c;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+}
+
+.lineSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+hr {
+  transition: 0.5;
+  border: 1px solid #4f5d64;
+  width: 95%;
+  user-select: none;
+}
+
+.header nav {
+  display: flex;
+  padding: 2% 8%;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+nav a {
+  font-family: "Sixtyfour", sans-serif;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #e56717;
+}
+
+nav .dOrW {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.dOrW .modeBtn {
+  transition: 0.5s;
+  color: #f1f3f4;
+}
+
+.dOrW .modeBtn.selected {
+  color: #e56717;
+}
+
+.dOrW .modeBtn.light {
+  color: #171b1c;
+}
+
+.dOrW .modeBtn:hover {
+  cursor: pointer;
+  color: #e56717;
+}
+
+.mainSection {
+  display: flex;
+  justify-content: center;
+}
+
+.smallScreen {
+  display: none;
+  align-items: center;
+  text-align: center;
+  width: 83%;
+  padding-top: 4rem;
+  color: #f1f3f4;
+  user-select: none;
+}
+
+.smallScreen h1 {
+  font-family: "Sixtyfour", sans-serif;
+  font-weight: 600;
+  border: 2px solid #e56717;
+  padding: 2rem;
+  line-height: 2rem;
+  border-radius: 2rem;
+}
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  width: 83%;
+  user-select: none;
+}
+
+.main .sideBar aside {
+  width: 10rem;
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  user-select: none;
+}
+
+aside .aLink {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  text-decoration: none;
+  color: #f1f3f4;
+  border-radius: 1rem;
+  font-weight: 600;
+  font-size: 1.3rem;
+  transition: 0.5s;
+}
+
+aside .aLink i {
+  color: #e56717;
+}
+
+aside .aLink:hover {
+  padding: 5px 10px;
+  border: 2px solid #4f5d64;
+}
+
+aside .aLink.selected {
+  padding: 5px 10px;
+  border: 2px solid #e56717;
+}
+
+/*---------------------------NOTES---------------------------*/
+
+.main .notesContent {
+  padding-top: 4rem;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.notesContent .note {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 30rem;
+  padding: 1rem;
+  border: 2px solid #e56717;
+  border-radius: 2rem;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.note .btnsSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.btnsSection .twoBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#openFile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#openFile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#saveFile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#saveFile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#saveAsFile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#saveAsFile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#closeFile {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#closeFile:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#textArea {
+  transition: 0.5s;
+  padding: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #f1f3f4;
+}
+
+#textArea::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+#textArea::-webkit-scrollbar-thumb {
+  background-color: #4f5d64;
+  border-radius: 1rem;
+}
+
+#textArea::-webkit-scrollbar-track {
+  background-color: #171b1c;
+}
+
+#textArea.light::-webkit-scrollbar-track {
+  background-color: #f1f3f4;
+}
+
+/*---------------------------NOTES---------------------------*/
+
+.main .to-doContent {
+  padding-top: 4rem;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.to-doContent .to-do {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  height: 30rem;
+  padding: 1rem;
+  border: 2px solid #e56717;
+  border-radius: 2rem;
+  gap: 0.5rem;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.to-do .inputSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.inputSection p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #f1f3f4;
+  padding: 0.3rem 0.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: 0.5s;
+  user-select: none;
+}
+
+.inputSection #inputBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 1rem;
+  color: #171b1c;
+  background-color: #f1f3f4;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+  width: 60%;
+  user-select: none;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+}
+
+.inputSection .to-doBtns {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+#addTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#addTask:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+#cancelTask {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: #f1f3f4;
+  border-radius: 0.7rem;
+  padding: 0.3rem 0.6rem;
+  gap: 0.3rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+#cancelTask:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.listSection {
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 0.5rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  color: #f1f3f4;
+  user-select: none;
+}
+
+.listSection li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  cursor: pointer;
+}
+
+.listSection li .listContent {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  width: 100%;
+}
+
+.listSection li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+  padding: 0.1rem;
+}
+
+.listSection li a:hover {
+  cursor: pointer;
+}
+
+.listSection li.checked p {
+  color: #d4dadd;
+  transition: 0.5s;
+  text-decoration: line-through;
+}
+
+.listSection.light li.checked p {
+  color: #2e3638;
+  transition: 0.5s;
+  text-decoration: line-through;
+}
+
+.listSection li.checked i {
+  color: #e56717;
+}
+
+.listSection::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.listSection::-webkit-scrollbar-thumb {
+  background-color: #4f5d64;
+  border-radius: 1rem;
+}
+
+.listSection::-webkit-scrollbar-track {
+  background-color: #171b1c;
+}
+
+.listSection.light::-webkit-scrollbar-track {
+  background-color: #f1f3f4;
+}
+
+/*---------------------------ABOUT---------------------------*/
+
+.main .aboutContent {
+  padding-top: 4rem;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.aboutContent .about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding: 2rem;
+  border: 2px solid #e56717;
+  border-radius: 2rem;
+  gap: 2rem;
+  font-weight: 600;
+  user-select: none;
+  width: 40%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.about p:first-child {
+  color: #e56717;
+  font-size: 2rem;
+}
+
+.about p {
+  transition: 0.5s;
+  font-size: 1.5rem;
+  font-family: "Sixtyfour", sans-serif;
+  display: flex;
+  line-height: 2rem;
+  color: #f1f3f4;
+}
+
+@media screen and (max-width: 700px) {
+  .main {
+    display: none;
+  }
+
+  .smallScreen {
+    display: flex;
+  }
+}
